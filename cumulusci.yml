@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.48.2'
+project:
+    name: salesforcerobotframeworkdemo
+    package:
+        name: SamplePackageName
+        namespace: sampleNamespace
+        api_version: '52.0'
+    dependencies:
+        - github: 'https://github.com/SalesforceFoundation/NPSP'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/salesforcerobotframeworkdemo/tests
+            options:
+                outputdir: robot/salesforcerobotframeworkdemo/results
+
+    robot_testdoc:
+        options:
+            path: robot/salesforcerobotframeworkdemo/tests
+            output: robot/salesforcerobotframeworkdemo/doc/salesforcerobotframeworkdemo_tests.html
+
